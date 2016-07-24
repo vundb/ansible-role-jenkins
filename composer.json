@@ -1,0 +1,18 @@
+{
+  "name": "vundb/ansible-role-jenkins",
+  "description": "Ansible role to install and configure jenkins on gentoo instances.",
+  "license": "MIT",
+  "type": "chef-role",
+  "authors": [
+    {
+      "name": "Viktor Breitenbuecher",
+      "email": "vic.b@outlook.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  },
+  "extra": {
+    "installer-name": "jenkins"
+  }
+}
