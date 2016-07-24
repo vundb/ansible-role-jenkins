@@ -1,0 +1,24 @@
+---
+
+# write package config
+
+- include: ../../../portage/tasks/gentoo/main.yml
+  vars:
+    portage_configuration:
+      - section: "package.accept_keywords"
+        file: "dev-util-jenkins-bin"
+        entries:
+          - "=dev-util/jenkins-bin-2.5 ~amd64"
+      - section: "package.use"
+        file: "dev-util-jenkins-bin"
+        entries:
+          - ">=x11-libs/cairo-1.14.6 X"
+          - ">=x11-libs/gdk-pixbuf-2.32.3 X"
+    portage_packages: []
+
+
+# install jenkins
+
+- name: install jenkins
+  become: yes
+  portage: package="dev-util/jenkins-bin" state="present" newuse=yes update=yes
