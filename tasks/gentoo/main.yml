@@ -22,3 +22,15 @@
 - name: install jenkins
   become: yes
   portage: package="dev-util/jenkins-bin" state="present" newuse=yes update=yes
+
+
+# configure jenkins
+
+- name: ensure setup wizard is disabled
+  become: yes
+  lineinfile:
+    dest: "/etc/conf.d/jenkins"
+    regexp: '^JENKINS_JAVA_OPTIONS="(.*)(?<! -Djenkins.install.runSetupWizard=false)"$'
+    line: 'JENKINS_JAVA_OPTIONS="\1 -Djenkins.install.runSetupWizard=false"'
+    backrefs: yes
+  notify: jenkins - restart
