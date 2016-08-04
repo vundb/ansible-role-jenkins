@@ -1,0 +1,5 @@
+---
+
+- name: jenkins - restart
+  become: yes
+  service: name="jenkins" state="restarted"
