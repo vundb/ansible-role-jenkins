@@ -11,9 +11,9 @@
   ],
   "require": {
     "composer/installers": "~1.0",
-    "vundb/ansible-role-portage": "1.0.*"
+    "vundb/ansible-role-portage": "1.1.*"
   },
   "extra": {
-    "installer-name": "jenkins"
+    "installer-name": "vundb-jenkins"
   }
 }
