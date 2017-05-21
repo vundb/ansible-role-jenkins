@@ -8,12 +8,7 @@
       - section: "package.accept_keywords"
         file: "dev-util-jenkins-bin"
         entries:
-          - "=dev-util/jenkins-bin-2.5 ~amd64"
-      - section: "package.use"
-        file: "dev-util-jenkins-bin"
-        entries:
-          - ">=x11-libs/cairo-1.14.6 X"
-          - ">=x11-libs/gdk-pixbuf-2.32.3 X"
+          - "=dev-util/jenkins-bin-2.57 ~amd64"
     portage_packages: []
 
 
