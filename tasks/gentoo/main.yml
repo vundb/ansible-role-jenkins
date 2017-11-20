@@ -2,13 +2,13 @@
 
 # write package config
 
-- include: ../../../vundb-portage/tasks/gentoo/main.yml
+- import_tasks: ../../../vundb-portage/tasks/gentoo/main.yml
   vars:
     portage_configuration:
       - section: "package.accept_keywords"
         file: "dev-util-jenkins-bin"
         entries:
-          - "=dev-util/jenkins-bin-2.57 ~amd64"
+          - ">=dev-util/jenkins-bin-2.57 ~amd64"
     portage_packages: []
 
 

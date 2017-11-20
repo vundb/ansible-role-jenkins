@@ -9,7 +9,7 @@
 
 # run os specific tasks
 
-- include: gentoo/main.yml
+- import_tasks: gentoo/main.yml
   when: ansible_distribution == "Gentoo"
 
 
